@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWpU6lJ4U+V7lQ1iVbQ1iB+P+4Rz5+R/7r/L+rB/p5wP+6rBf1u/y3N1rA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100">
+
+ <!-- Navbar Container -->
+    <nav class="bg-white shadow-md w-full fixed top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <!-- Logo/Brand Name -->
+            <div class="flex items-center">
+                <a href="#" class="text-xl font-bold text-gray-800 transition-colors">Material Tailwind</a>
+            </div>
+
+            <!-- Main Navigation Links & Buttons (Desktop) -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#" class="text-gray-600 hover:text-gray-900 font-medium transition-colors flex items-center space-x-2">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Page</span>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 font-medium transition-colors flex items-center space-x-2">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Account</span>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 font-medium transition-colors flex items-center space-x-2">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Docs</span>
+                </a>
+                <a href="#" class="text-gray-800 hover:text-gray-900 font-medium transition-colors">SIGN IN</a>
+                <a href="#" class="px-5 py-2 bg-black text-white rounded-md font-medium hover:bg-gray-800 transition-colors shadow-md">BLOCKS</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                    <!-- Hamburger icon -->
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="block w-full basis-full overflow-hidden" hidden class= "block sm:hidden"style=" height: auto;">
+          <div class="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
+            <ul class="flex flex-col gap-4">
+              <li><a href="#" class=" px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors flex items-center space-x-2">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Page</span>
+            </a></li>
+              <li><a href="#" class="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors  items-center space-x-2">
+                <i class="fa-solid fa-user"></i>
+                <span>Account</span>
+            </a></li>
+              <li>  <a href="#" class=" block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors  items-center space-x-2">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Docs</span>
+            </a></li>
+            </ul>
+            <div><a href="#" class="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors">SIGN IN</a></div>
+            <a href="https://www.material-tailwind.com/blocks" class="block px-4 py-3 bg-black text-white hover:bg-gray-800 transition-colors text-center font-medium">BLOCKS</a>
+
+          </div>
+        </div>
+    </nav>
+
+    <!-- Header/Hero Section -->
+    <header class="pt-24 min-h-screen bg-gray-100 flex items-center justify-center">
+        <div class="container mx-auto px-4 md:px-6 flex flex-col-reverse md:flex-row-reverse items-center gap-12 py-12 md:py-24">
+            <!-- Image Column -->
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+                <img src="https://demos.creative-tim.com/nextjs-tailwind-portfolio-page/image/image-7.svg" alt="Profile Picture" class="rounded-lg shadow-xl w-full max-w-sm">
+            </div>
+
+            <!-- Content Column -->
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-800">Welcome to my Web Development Portofolio!</h1>
+                <p class="mt-4 text-lg text-gray-600">
+                    I'm Lily Smith, a passionate web developer based in USA. Here, you'll get a glimpse of my journey in the world of web development, where creativity meets functionality.
+                </p>
+                <!-- Email Input and Button -->
+                <div class="mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <input type="email" placeholder="Enter your email" class="w-full sm:w-auto px-4 py-3 rounded-lg border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                    <button class="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+                        REQUIRE OFFER
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- My awesome clients Section -->
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <h3 class="text-lg font-semibold text-gray-500">My awesome clients</h3>
+            <div class="mt-8 flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                <img src="https://placehold.co/120x40/0052FF/FFFFFF?text=coinbase" alt="Coinbase" class="h-8 md:h-10">
+                <img src="https://placehold.co/120x40/1DB954/FFFFFF?text=Spotify" alt="Spotify" class="h-8 md:h-10">
+                <img src="https://placehold.co/120x40/BD081C/FFFFFF?text=Pinterest" alt="Pinterest" class="h-8 md:h-10">
+                <img src="https://placehold.co/120x40/4285F4/FFFFFF?text=Google" alt="Google" class="h-8 md:h-10">
+                <img src="https://placehold.co/120x40/FF9900/FFFFFF?text=amazon" alt="Amazon" class="h-8 md:h-10">
+                <img src="https://placehold.co/120x40/E50914/FFFFFF?text=NETFLIX" alt="Netflix" class="h-8 md:h-10">
+            </div>
+        </div>
+    </section>
+
+    <!-- My Skills Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <h3 class="text-lg font-semibold text-gray-500">MY SKILLS</h3>
+            <h2 class="text-4xl font-bold text-gray-800 mt-2">What I do</h2>
+            <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                I'm not just a developer; I'm a digital dreamweaver. Crafting immersive online experiences is not just a job but my calling. Discover below how I can help you.
+            </p>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Frontend Development Card -->
+                <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white text-xl">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4 class="mt-4 text-xl font-bold text-gray-800">Frontend Web Development</h4>
+                    <p class="mt-2 text-gray-600 text-sm leading-relaxed">
+                        Creating beautiful and functional web experiences is my forte. Using the latest technologies and best practices, I design and build websites that captivate and engage users.
+                    </p>
+                </div>
+                <!-- Mobile App Development Card -->
+                <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white text-xl">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 class="mt-4 text-xl font-bold text-gray-800">Mobile App Development</h4>
+                    <p class="mt-2 text-gray-600 text-sm leading-relaxed">
+                        I specialize in creating responsive and intuitive mobile apps that work seamlessly across iOS & Android devices. From concept to deployment, I handle every stage of the development process.
+                    </p>
+                </div>
+                <!-- Technology Stack Card -->
+                <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white text-xl">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4 class="mt-4 text-xl font-bold text-gray-800">Technology Stack</h4>
+                    <p class="mt-2 text-gray-600 text-sm leading-relaxed">
+                        I'm well-versed in the industry's most popular frontend technologies, including HTML5, CSS3, JavaScript, and frameworks like React and React Native.
+                    </p>
+                </div>
+                <!-- Web Optimization Card -->
+                <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white text-xl">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h4 class="mt-4 text-xl font-bold text-gray-800">Web Optimization</h4>
+                    <p class="mt-2 text-gray-600 text-sm leading-relaxed">
+                        Performance matters. I optimize websites and apps for speed, ensuring your users enjoy a fast and responsive experience, which in turn boosts user satisfaction and SEO rankings.
+                    </p>
+                </div>
+                <!-- User-Centric Design Card -->
+                <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white text-xl">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h4 class="mt-4 text-xl font-bold text-gray-800">User-Centric Design</h4>
+                    <p class="mt-2 text-gray-600 text-sm leading-relaxed">
+                        My development goes hand-in-hand with an eye for design. I create user interfaces that are not only functional but also aesthetically pleasing, providing a seamless and enjoyable user journey.
+                    </p>
+                </div>
+                <!-- Testing and Quality Assurance Card -->
+                <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white text-xl">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h4 class="mt-4 text-xl font-bold text-gray-800">Testing and Quality Assurance</h4>
+                    <p class="mt-2 text-gray-600 text-sm leading-relaxed">
+                        I rigorously test and debug applications to guarantee a bug-free and secure environment for users. Your peace of mind is as important to me as the functionality of your project.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Projects Section -->
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-800">My Projects</h2>
+            <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                Whether you have a mobile app idea that needs to come to life or a website that requires a facelift, I'm here to turn your digital dreams into reality.
+            </p>
+            <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://demos.creative-tim.com/nextjs-tailwind-portfolio-page/image/blog-1.svg" alt="Mobile App Development" class="w-full h-auto">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800">Mobile App Development</h4>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Mobile app designed to help users discover and explore local restaurants and cuisines.
+                        </p>
+                        <button class="mt-4 px-4 py-2 text-sm font-semibold text-black border border-black rounded-lg hover:bg-black hover:text-white transition-colors">
+                            SEE DETAILS
+                        </button>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://demos.creative-tim.com/nextjs-tailwind-portfolio-page/image/blog2.svg" alt="Landing Page Development" class="w-full h-auto">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800">Landing Page Development</h4>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Promotional landing page for a fitness website Summer Campaign. Form development included.
+                        </p>
+                        <button class="mt-4 px-4 py-2 text-sm font-semibold text-black border border-black rounded-lg hover:bg-black hover:text-white transition-colors">
+                            SEE DETAILS
+                        </button>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://demos.creative-tim.com/nextjs-tailwind-portfolio-page/image/blog3.svg" alt="Mobile App Development" class="w-full h-auto">
+                    <div class="p-6">
+                        <h4 class="mt-4 text-xl font-bold text-gray-800">Mobile App Development</h4>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Mobile app designed to help users discover and explore local restaurants and cuisines.
+                        </p>
+                        <button class="mt-4 px-4 py-2 text-sm font-semibold text-black border border-black rounded-lg hover:bg-black hover:text-white transition-colors">
+                            SEE DETAILS
+                        </button>
+                    </div>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://demos.creative-tim.com/nextjs-tailwind-portfolio-page/image/blog4.svg" alt="E-commerce Development" class="w-full h-auto">
+                    <div class="p-6">
+                        <h4 class="mt-4 text-xl font-bold text-gray-800">E-commerce Development</h4>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Ecommerce website offering access to the latest and greatest gadgets and accessories
+                        </p>
+                        <button class="mt-4 px-4 py-2 text-sm font-semibold text-black border border-black rounded-lg hover:bg-black hover:text-white transition-colors">
+                            SEE DETAILS
+                        </button>
+                    </div>
+                </div>
+                <!-- Project Card 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://demos.creative-tim.com/nextjs-tailwind-portfolio-page/image/blog-1.svg" alt="Mobile App Development" class="w-full h-auto">
+                    <div class="p-6">
+                        <h4 class="mt-4 text-xl font-bold text-gray-800">Mobile App Development</h4>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Mobile app designed to help users discover and explore local restaurants and cuisines.
+                        </p>
+                        <button class="mt-4 px-4 py-2 text-sm font-semibold text-black border border-black rounded-lg hover:bg-black hover:text-white transition-colors">
+                            SEE DETAILS
+                        </button>
+                    </div>
+                </div>
+                <!-- Project Card 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://demos.creative-tim.com/nextjs-tailwind-portfolio-page/image/blog2.svg" alt="Landing Page Development" class="w-full h-auto">
+                    <div class="p-6">
+                        <h4 class="mt-4 text-xl font-bold text-gray-800">Landing Page Development</h4>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Promotional landing page for a fitness website Summer Campaign. Form development included.
+                        </p>
+                        <button class="mt-4 px-4 py-2 text-sm font-semibold text-black border border-black rounded-lg hover:bg-black hover:text-white transition-colors">
+                            SEE DETAILS
+                        </button>
+                    </div>
+                </div>
+                <!-- Project Card 7 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://demos.creative-tim.com/nextjs-tailwind-portfolio-page/image/blog3.svg" alt="Mobile App Development" class="w-full h-auto">
+                    <div class="p-6">
+                        <h4 class="mt-4 text-xl font-bold text-gray-800">Mobile App Development</h4>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Mobile app designed to help users discover and explore local restaurants and cuisines.
+                        </p>
+                        <button class="mt-4 px-4 py-2 text-sm font-semibold text-black border border-black rounded-lg hover:bg-black hover:text-white transition-colors">
+                            SEE DETAILS
+                        </button>
+                    </div>
+                </div>
+                <!-- Project Card 8 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://demos.creative-tim.com/nextjs-tailwind-portfolio-page/image/blog4.svg" alt="E-commerce Development" class="w-full h-auto">
+                    <div class="p-6">
+                        <h4 class="mt-4 text-xl font-bold text-gray-800">E-commerce Development</h4>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Ecommerce website offering access to the latest and greatest gadgets and accessories
+                        </p>
+                        <button class="mt-4 px-4 py-2 text-sm font-semibold text-black border border-black rounded-lg hover:bg-black hover:text-white transition-colors">
+                            SEE DETAILS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Resume Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-start justify-between gap-12">
+                <!-- Resume Description Column -->
+                <div class="w-full md:w-1/2 text-left">
+                    <h2 class="text-4xl font-bold text-gray-800">My Resume</h2>
+                    <p class="mt-4 text-gray-600 max-w-lg">
+                        Highly skilled and creative Web Developer with 5+ years of experience in crafting visually stunning and functionally robust websites and web applications.
+                    </p>
+                    <a href="#" class="mt-6 flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                        <span>VIEW MORE</span>
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                <!-- Certifications Column -->
+                <div class="w-full md:w-1/2 mt-8 md:mt-0 flex flex-col space-y-4">
+                    <!-- Certification Card 1 -->
+                    <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg shadow-md">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-black text-white text-xl">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800">Bachelor of Science in Computer Science</h4>
+                    </div>
+                    <!-- Certification Card 2 -->
+                    <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg shadow-md">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-black text-white text-xl">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800">Certified Web Developer</h4>
+                    </div>
+                    <!-- Certification Card 3 -->
+                    <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg shadow-md">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-black text-white text-xl">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800">Frontend Framework Proficiency Certification</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col-reverse md:flex-row items-start justify-between gap-12">
+                <!-- Testimonial Content Column -->
+                <div class="w-full md:w-1/2 text-left">
+                    <h3 class="text-xl font-bold text-gray-800">Mobile App Development</h3>
+                    <p class="mt-4 text-gray-600 max-w-lg">
+                        I had the pleasure of working with Lily on a critical web development project, and I can confidently say that their expertise and professionalism exceeded my expectations.
+                    </p>
+                    <p class="mt-4 font-semibold text-gray-800">Michael - Technical Manager</p>
+                    <p class="text-gray-600">Marketing @ APPLE INC.</p>
+                </div>
+                <!-- Testimonial Image Column -->
+                <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+                    <img src="https://demos.creative-tim.com/nextjs-tailwind-portfolio-page/image/avatar3.jpg" alt="Lily" class="rounded-lg shadow-xl w-full max-w-sm transform rotate-6">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4 md:px-6 flex flex-col md:flex-row rounded-lg shadow-xl overflow-hidden">
+            <!-- Contact Info Sidebar (Dark) -->
+            <div class="w-full md:w-1/3 bg-gray-800 p-8 text-white">
+                <h3 class="text-xl font-semibold mb-2">Contact Information</h3>
+                <p class="text-sm text-gray-400 mb-6">Fill up the form and our Team will get back to you within 24 hours.</p>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-phone-alt text-lg"></i>
+                        <span>+1(424) 636 3623</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-envelope text-lg"></i>
+                        <span>hello@gmail.com</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-ticket-alt text-lg"></i>
+                        <span>Open Support Ticket</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="w-full md:w-2/3 p-8 bg-white">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first_name" class="block text-sm font-medium text-gray-700">First Name</label>
+                            <input type="text" id="first_name" name="first_name" placeholder="eg. Lucas" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="last_name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                            <input type="text" id="last_name" name="last_name" placeholder="eg. Jones" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" placeholder="eg. lucas@gmail.com" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">What are you interested in?</label>
+                        <div class="mt-2 flex space-x-4">
+                            <div class="flex items-center">
+                                <input type="radio" id="design" name="interest" value="design" class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300">
+                                <label for="design" class="ml-2 text-sm text-gray-700">Design</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" id="development" name="interest" value="development" class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300">
+                                <label for="development" class="ml-2 text-sm text-gray-700">Development</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" id="support" name="interest" value="support" class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300">
+                                <label for="support" class="ml-2 text-sm text-gray-700">Support</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" id="other" name="interest" value="other" class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300">
+                                <label for="other" class="ml-2 text-sm text-gray-700">Other</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Your Message</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+                            SEND MESSAGE
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+</body>
+</html>
